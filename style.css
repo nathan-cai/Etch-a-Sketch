@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+
+/* div {
+    border: 2px solid black;
+} */
+
+#middle {
+    height: 600px;
+    width: 600px;
+    border: 0.5px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#test {
+    background-color: lightgray; 
+    width: 30px; 
+    height: 30px;
+}
+
+.gridbox {
+    border: 0;
+}
