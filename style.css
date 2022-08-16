@@ -34,9 +34,65 @@ body {
     display: flex;
 }
 
+#sizing{
+    padding-left: 15px;
+    text-align: center;
+}
+
+#currSize {
+    margin: 0;
+}
+
+.slider {
+    margin: 0;
+}
 #clear {
     height: 25px;
     width: 50px;
     border-radius: 5px;
 }
 
+#colorMenu {
+    margin-right: 15px;
+}
+
+.color {
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    border: 0;
+    border-radius: 30px;
+    transition: transform .2s;
+}
+
+.color:hover {
+    transform: scale(1.1);
+}
+
+#black {
+    background-color: black;
+}
+
+#grey {
+    background-color: grey;
+}
+
+#green {
+    background-color: green;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#red {
+    background-color: red;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+.selected {
+    transform: scale(1.2);
+}
