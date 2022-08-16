@@ -2,6 +2,13 @@ const middle = document.querySelector('#middle');
 const clear = document.querySelector('#clear');
 const currSize = document.querySelector('#currSize');
 const slider = document.querySelector('.slider');
+let color = 'black';
+
+function colorSelect(node) {
+    document.querySelector(`#${color}`).classList.toggle("selected");
+    color = node.id;
+    document.querySelector(`#${color}`).classList.toggle("selected");
+};
 
 function createGrid(dimensions) {
     const size = 600/dimensions;
@@ -21,7 +28,7 @@ function createGrid(dimensions) {
 };
 
 function draw(node) {
-    node.style.backgroundColor = 'black';
+    node.style.backgroundColor = color;
 }
 
 clear.addEventListener('click', whiten);
