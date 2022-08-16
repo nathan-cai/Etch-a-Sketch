@@ -3,6 +3,7 @@ const clear = document.querySelector('#clear');
 const currSize = document.querySelector('#currSize');
 const slider = document.querySelector('.slider');
 let color = 'black';
+let mouseDown = false;
 
 function colorSelect(node) {
     document.querySelector(`#${color}`).classList.toggle("selected");
@@ -27,9 +28,18 @@ function createGrid(dimensions) {
     };
 };
 
-function draw(node) {
-    node.style.backgroundColor = color;
+document.body.onmousedown = function() { 
+    mouseDown = true;
 }
+document.body.onmouseup = function() {
+    mouseDown = false;
+}
+
+function draw(node) {
+    if (mouseDown) {
+        node.style.backgroundColor = color;
+    }
+};
 
 clear.addEventListener('click', whiten);
 
