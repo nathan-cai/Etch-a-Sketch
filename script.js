@@ -37,7 +37,10 @@ function whiten() {
 createGrid(10); 
 
 slider.onchange = function () {
-    currSize.innerHTML = `${this.value} x ${this.value}`;
     middle.innerHTML = '';
     createGrid(this.value);
+}
+
+slider.oninput = function () {
+    currSize.innerHTML = `${this.value} x ${this.value}`;
 }
