@@ -27,3 +27,16 @@ body {
 .gridbox {
     border: 0;
 }
+
+#menu {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+}
+
+#clear {
+    height: 25px;
+    width: 50px;
+    border-radius: 5px;
+}
+
