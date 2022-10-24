@@ -1,7 +1,8 @@
 const middle = document.querySelector('#middle');
 const clear = document.querySelector('#clear');
 const currSize = document.querySelector('#currSize');
-const slider = document.querySelector('.slider');
+const slider = document.querySelector('#slider');
+
 let color = 'black';
 let mouseDown = false;
 
@@ -16,7 +17,7 @@ function createGrid(dimensions) {
     const gridBox = document.createElement('div');
     const row = document.createElement('div');
     gridBox.setAttribute('class', 'gridBox');
-    gridBox.setAttribute("style", `background-color: white; width: ${size}px; height: ${size}px; border: 0.04px solid #F0F0F0; box-sizing: border-box;`);
+    gridBox.setAttribute("style", `background-color: white; width: ${size}px; height: ${size}px; border: 0.03px solid #F0F0F0; box-sizing: border-box;`);
     gridBox.setAttribute('onmouseover', `draw(this)`);
     for (let i = 0; i < dimensions; i++) {
         const currBox = gridBox.cloneNode(true);
@@ -38,13 +39,15 @@ document.body.onmouseup = function() {
 function draw(node) {
     if (mouseDown) {
         node.style.backgroundColor = color;
+        node.style.border = 0;
     }
 };
 
 clear.addEventListener('click', whiten);
 
 function makeWhite(node) {
-    node.style.backgroundColor = 'white'
+    node.style.backgroundColor = 'white';
+    node.style.border = '0.03px solid #F0F0F0'
 };
 
 function whiten() {

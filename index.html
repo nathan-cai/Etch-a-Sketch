@@ -8,34 +8,50 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="top">
-      <h1 id="title">Etch-a-Sketch</h1>
-    </div>
-    <div id="middle"></div>
-    <div id="bottom">
-      <div id="menu">
-        <div id="colorMenu">
-          <button
-            class="color selected"
-            id="black"
-            onclick="colorSelect(this)"
-          ></button>
-          <button class="color" id="grey" onclick="colorSelect(this)"></button>
-          <button class="color" id="blue" onclick="colorSelect(this)"></button>
-          <button class="color" id="green" onclick="colorSelect(this)"></button>
-          <button
-            class="color"
-            id="yellow"
-            onclick="colorSelect(this)"
-          ></button>
-          <button class="color" id="red" onclick="colorSelect(this)"></button>
-        </div>
-        <div id="buttondiv">
-          <button id="clear">Clear</button>
-        </div>
-        <div id="sizing">
-          <input type="range" min="10" max="100" value="10" class="slider" />
-          <p id="currSize">10 x 10</p>
+    <div id="outside">
+      <div id="top">
+        <h1 id="title">Etch-a-Sketch</h1>
+      </div>
+      <div id="middle"></div>
+      <div id="bottom">
+        <div id="menu">
+          <div id="Rcircle"></div>
+          <div id="colorMenu">
+            <button
+              class="color selected"
+              id="black"
+              onclick="colorSelect(this)"
+            ></button>
+            <button
+              class="color"
+              id="grey"
+              onclick="colorSelect(this)"
+            ></button>
+            <button
+              class="color"
+              id="blue"
+              onclick="colorSelect(this)"
+            ></button>
+            <button
+              class="color"
+              id="green"
+              onclick="colorSelect(this)"
+            ></button>
+            <button
+              class="color"
+              id="yellow"
+              onclick="colorSelect(this)"
+            ></button>
+            <button class="color" id="red" onclick="colorSelect(this)"></button>
+          </div>
+          <div id="buttondiv">
+            <button id="clear" class="button-19" role="button">clear</button>
+          </div>
+          <div id="sizing">
+            <input type="range" min="10" max="100" value="10" id="slider" />
+            <p id="currSize">10 x 10</p>
+          </div>
+          <div id="Lcircle"></div>
         </div>
       </div>
     </div>
